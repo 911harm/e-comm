@@ -22,66 +22,29 @@ transition: 200ms all;
         color:white;
     }
 }
+.btn-small{
+    color:black;
+    width: 100px;
+}
+.Footer{
+    font-size: 0.9rem;
+    position:fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: #434343;
+    color: white;
+    line-height: 30px;
+    height: 30px;
+    a{
+        color:white;
+    }
 
+}
 @import './styles/navBar.scss';
+@import './styles/Items.scss';
 
 
 
 
-// Items and Item
-.list-items{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-.card{
-    // border:1px solid lime;
-    border-radius:5px;
-    box-shadow: -1px 2px 5px 1px black;
-    margin:10px;
-    padding: 10px;
-    width: 120px;
-    height: 200px;
-    .cart-add{
-        float: right;
-    }
-    .card-title{
-        margin-top:5px;
-        h2{
-            margin:5px 0;
-            font-size: 15px;
-        }
-        img{
-            margin:auto;
-            width:80%;
-        }
-    }
-    .card-body{
-        margin:30px auto;
-        .price{
-            font-size: 14px;
-
-        }
-        .raiting{
-            margin: 4px;
-        }
-        .btn-show{
-            width: 80%;
-            margin: auto;
-        }
-
-    }
-}
-
-@media screen and(max-width:365px){
-.card{
-    width: 80%;
-    height: 300px;
-    .card-body{
-        .raiting{
-            font-size: 1.3rem;
-        }
-    }
-}
-}

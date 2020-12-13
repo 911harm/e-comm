@@ -26,6 +26,28 @@
   color: white;
 }
 
+.btn-small {
+  color: black;
+  width: 100px;
+}
+
+.Footer {
+  font-size: 0.9rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background-color: #434343;
+  color: white;
+  line-height: 30px;
+  height: 30px;
+}
+
+.Footer a {
+  color: white;
+}
+
 .menu-short {
   display: block;
   font-size: 1.4rem;
@@ -76,6 +98,7 @@
 }
 
 .list-items {
+  margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -86,9 +109,9 @@
   border-radius: 5px;
   box-shadow: -1px 2px 5px 1px black;
   margin: 10px;
-  padding: 10px;
+  padding: 13px;
   width: 120px;
-  height: 200px;
+  height: 190px;
 }
 
 .card .cart-add {
@@ -105,23 +128,27 @@
 }
 
 .card .card-title img {
-  margin: auto;
+  display: block;
+  border: 1px solid black;
+  margin: 5px auto;
   width: 80%;
 }
 
 .card .card-body {
-  margin: 30px auto;
+  margin: 20px auto;
 }
 
 .card .card-body .price {
   font-size: 14px;
 }
 
-.card .card-body .raiting {
+.card .card-body .rating {
   margin: 4px;
+  color: #efb810;
 }
 
 .card .card-body .btn-show {
+  color: black;
   width: 80%;
   margin: auto;
 }
@@ -129,9 +156,9 @@
 @media screen and (max-width: 365px) {
   .card {
     width: 80%;
-    height: 300px;
+    height: 275px;
   }
-  .card .card-body .raiting {
+  .card .card-body .rating {
     font-size: 1.3rem;
   }
 }
