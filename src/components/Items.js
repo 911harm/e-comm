@@ -1,21 +1,26 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import Item from './Item'
-const item={
-    name:"Cpu Ryzen 5",
-    price:420,
-    image:"./images/ryzen.svg",
-    rating:4.5,
-    _id:121
-}
+
 export default function Items() {
+    const dispatch = useDispatch();
+    const products = useSelector(state => state.products)
+    
+    useEffect(() => {
+        fetch("http://localhost:3232/")
+        .then(response => response.json())
+        .then(data => {
+            dispatch({ type: "ADD_ITEM_LIST", payload: data.products })
+        });
+        
+
+    }, [dispatch])
     return (
         <div className="list-items">
-            <Item Item={item}></Item>
-            <Item Item={item}></Item>
-            <Item Item={item}></Item>
-            <Item Item={item}></Item>
-            <Item Item={item}></Item>
-            <Item Item={item}></Item>
+            {products.length > 0 &&
+                products.map(product => <Item key={product._id} Item={product}></Item>)
+            }
+
         </div>
     )
 }

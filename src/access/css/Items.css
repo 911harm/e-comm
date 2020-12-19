@@ -7,6 +7,7 @@
 }
 
 .card {
+  position: relative;
   border-radius: 5px;
   box-shadow: -1px 2px 5px 1px black;
   margin: 10px;
@@ -16,11 +17,13 @@
 }
 
 .card .cart-add {
-  float: right;
+  position: absolute;
+  top: 2px;
+  right: 5px;
 }
 
 .card .card-title {
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 .card .card-title h2 {
@@ -32,11 +35,12 @@
   display: block;
   border: 1px solid black;
   margin: 5px auto;
-  width: 80%;
+  width: 70px;
+  height: 70px;
 }
 
 .card .card-body {
-  margin: 20px auto;
+  margin: 5px auto 20px auto;
 }
 
 .card .card-body .price {
@@ -58,6 +62,10 @@
   .card {
     width: 80%;
     height: 275px;
+  }
+  .card .card-title img {
+    width: 150px;
+    height: 150px;
   }
   .card .card-body .rating {
     font-size: 1.3rem;

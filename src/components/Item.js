@@ -1,10 +1,12 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 export default function Item({ Item }) {
+    const dispatch = useDispatch()
     const showItem = () => {
-        console.log("preesss")
-        
+        dispatch({ type: "ADD_ITEM_CARD", payload: Item._id })
+
     }
     return (
         <div className="card">
