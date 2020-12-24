@@ -2,7 +2,7 @@ import { createStore, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 
 const Reducer=(state={
-    card:[],
+    cart:[],
     products:[]
 },action)=>{
     switch(action.type){
@@ -12,8 +12,10 @@ const Reducer=(state={
         return {...state,loading:false,products:action.payload}
         case("FAIL_ITEM_LIST"):
         return {...state,loading:false,message:"Error"}
-        case("ADD_ITEM_CARD"):
-        return {...state,card:[...state.card,action.payload]}
+        case("ADD_ITEM_CART"):
+        return {...state,cart:[...state.cart,action.payload]}
+        case("DEL_ITEM_CART"):
+        return {...state,cart:state.cart.filter(id=>id!==action.payload)}
         default:
         return state
     }

@@ -1,18 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 export default function Item({ Item }) {
+    const [toggleCart, setToggleCart] = useState(true)
     const dispatch = useDispatch()
     const showItem = () => {
-        dispatch({ type: "ADD_ITEM_CARD", payload: Item._id })
+        setToggleCart(!toggleCart)
+        dispatch({ type: "ADD_ITEM_CART", payload: Item._id })
 
+    }
+    const showItem2 = () => {
+        setToggleCart(!toggleCart)
+        dispatch({ type: "DEL_ITEM_CART", payload: Item._id })
     }
     return (
         <div className="card">
-            <button className="cart-add" type="button" onClick={showItem}>
-                <i className="fa fa-cart-plus"></i>
-            </button>
+            {toggleCart
+                ? <button className="cart-add" type="button" onClick={showItem}>
+                    <i className="fa fa-cart-plus"></i>
+                </button>
+                : <button className="cart-add" type="button" onClick={showItem2}>
+                    <i className="fa fa-minus-circle"></i>
+                </button>
+
+            }
             <div className="card-title">
                 <img src={Item.image} alt={Item.name} />
                 <h2>{Item.name}</h2>
