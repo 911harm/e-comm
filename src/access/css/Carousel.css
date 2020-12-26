@@ -1,0 +1,23 @@
+.carousel-root {
+  width: 80%;
+  margin: 10px auto;
+}
+
+.carousel-root .carousel-slider {
+  width: 34%;
+  min-width: 300px;
+  margin: auto;
+}
+
+@media screen and (min-width: 500px) {
+  .carousel-root {
+    width: 50%;
+    margin: 10px auto;
+  }
+  .carousel-root .carousel-slider {
+    width: 34%;
+    min-width: 300px;
+    margin: auto;
+  }
+}
+/*# sourceMappingURL=Carousel.css.map */

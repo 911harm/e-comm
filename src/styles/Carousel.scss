@@ -1,0 +1,25 @@
+.carousel-root{
+    width: 80%;
+    margin: 10px auto;
+    .carousel{
+        &-slider{
+            width: 34%;
+            min-width: 300px;
+            margin: auto;
+        }
+    }
+}
+@media screen and (min-width:500px){
+    .carousel-root{
+        width: 50%;
+        margin: 10px auto;
+        .carousel{
+            &-slider{
+                // height: 300px;
+                width: 34%;
+                min-width: 300px;
+                margin: auto;
+            }
+        }
+    }
+}

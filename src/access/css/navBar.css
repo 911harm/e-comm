@@ -7,6 +7,7 @@
 
 .nav-bar {
   display: flex;
+  background-color: #024a86;
   justify-content: space-between;
   align-items: center;
   height: 60px;
@@ -14,11 +15,13 @@
 
 .brand {
   width: 10%;
+  height: 50px;
   margin: 15px;
+  margin-left: 20px;
 }
 
 .brand img {
-  width: 100%;
+  width: 68%;
   min-width: 60px;
 }
 
@@ -35,7 +38,12 @@
 }
 
 .menu ul li {
+  color: white;
   padding: 5px;
+}
+
+.menu ul li:hover {
+  color: rgba(19, 98, 216, 0.3);
 }
 
 @media screen and (min-width: 820px) {
