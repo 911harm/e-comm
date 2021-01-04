@@ -1,11 +1,11 @@
 import React from 'react'
-import CarouselCustom  from '../components/CarouselCustom'
 import Items from '../components/Items'
+import MultiCarousel from '../components/MultiCarousel'
 
 export default function Home() {
     return (
         <React.Fragment>
-            <CarouselCustom></CarouselCustom>
+            <MultiCarousel></MultiCarousel>
             <Items></Items>
         </React.Fragment>
     )

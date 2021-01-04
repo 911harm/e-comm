@@ -7,11 +7,16 @@ export default function Items() {
     const products = useSelector(state => state.products)
     
     useEffect(() => {
-        fetch("http://localhost:3232/")
-        .then(response => response.json())
-        .then(data => {
-            dispatch({ type: "ADD_ITEM_LIST", payload: data.products })
-        });
+        if(localStorage.getItem("items")){
+            dispatch({ type: "ADD_ITEM_LIST", payload:JSON.parse(localStorage.getItem("items")).products})
+        }else{
+            fetch("http://localhost:3232/")
+            .then(response => response.json())
+            .then(data => {
+                localStorage.setItem("items",JSON.stringify(data))
+                dispatch({ type: "ADD_ITEM_LIST", payload: data.products })
+            });
+        }
         
 
     }, [dispatch])

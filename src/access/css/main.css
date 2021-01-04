@@ -107,6 +107,7 @@
 
 .list-items {
   margin-top: 30px;
+  margin-bottom: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -195,7 +196,6 @@
     margin: 10px auto;
   }
   .carousel-root .carousel-slider {
-    height: 300px;
     width: 34%;
     min-width: 300px;
     margin: auto;
